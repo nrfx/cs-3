@@ -20,3 +20,4 @@ foreach(char letter in word1) // перебираю побуквенно пер�
         else { Console.Write("нет "); }
     }
 }
+Console.WriteLine();
