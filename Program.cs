@@ -12,6 +12,11 @@ foreach(char letter in word1) // перебираю побуквенно пер�
 {
     if (checkedLttrs.Contains(letter) == false) // если в переменной проверенных букв нет буквы то добавляем
     {
-      checkedLttrs += letter;
+        checkedLttrs += letter;
+        if (word2.Contains(letter))
+        {
+            Console.Write("да ");
+        }
+        else { Console.Write("нет "); }
     }
 }
