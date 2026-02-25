@@ -7,17 +7,19 @@ Console.Write("Введите второе слово: ");
 string word2 = Console.ReadLine();
 
 string checkedLttrs = "";
+string outMessage = "";
 
-foreach(char letter in word1) // перебираю побуквенно первое слово 
+foreach(char letter in word1)
 {
-    if (checkedLttrs.Contains(letter) == false) // если в переменной проверенных букв нет буквы то добавляем
+    if (checkedLttrs.Contains(letter) == false)
     {
         checkedLttrs += letter;
         if (word2.Contains(letter))
         {
-            Console.Write("да ");
+            outMessage += "да ";
         }
-        else { Console.Write("нет "); }
+        else { outMessage += "нет "; }
     }
 }
-Console.WriteLine();
+outMessage = outMessage.TrimEnd(); // убрать пробел в конце 
+Console.WriteLine(outMessage);
